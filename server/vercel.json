@@ -1,25 +1,15 @@
 {
-    "version": 2,
     "builds": [
-      {
-        "src": "api/index.py",
-        "use": "@vercel/python",
-        "config": {
-          "runtime": "python3.9"
+        {
+            "src": "main.py",
+            "use": "@vercel/python",
+            "config": { "runtime": "python3.9" }
         }
-      }
     ],
-    "build": {
-      "env": {
-        "PYTHONPATH": "."
-      },
-      "buildCommand": "pip install fastapi uvicorn pillow numpy tensorflow==2.12.0 h5py"
-    },
     "routes": [
-      {
-        "src": "/.*",
-        "dest": "api/index.py"
-      }
+        {
+            "src": "/(.*)",
+            "dest": "main.py"
+        }
     ]
-  }
-  
+}
