@@ -20,6 +20,7 @@ app.add_middleware(
 
 MODEL_PATH = "server/model.h5"
 
+
 # Custom Conv2D layer that supports groups, activation, use_bias, and other parameters.
 class CustomConv2D(tf.keras.layers.Layer):
     def __init__(self, filters, kernel_size, strides=(1, 1), padding='valid',
