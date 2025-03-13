@@ -42,7 +42,7 @@ export default function Dashboard() {
     try {
       console.log("Sending request to backend...");
 
-      const response = await fetch("https://aeternum-beta.vercel.app/predict", {
+      const response = await fetch("https://aeternum-beta.onrender.com/predict", {
         method: "POST",
         body: formData,
       });
