@@ -1,6 +1,6 @@
 fastapi 
 uvicorn 
-pillow 
-numpy 
-tensorflow
-h5py
+# pillow 
+# numpy 
+# tensorflow
+# h5py
