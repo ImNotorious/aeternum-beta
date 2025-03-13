@@ -4,3 +4,4 @@ pillow
 numpy 
 tensorflow
 h5py
+python-multipart
