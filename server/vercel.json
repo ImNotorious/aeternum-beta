@@ -5,11 +5,16 @@
         "src": "api/index.py",
         "use": "@vercel/python",
         "config": {
-          "runtime": "python3.9",
-          "installCommand": "pip install fastapi uvicorn pillow numpy tensorflow==2.12.0 h5py"
+          "runtime": "python3.9"
         }
       }
     ],
+    "build": {
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "buildCommand": "pip install fastapi uvicorn pillow numpy tensorflow==2.12.0 h5py"
+    },
     "routes": [
       {
         "src": "/.*",
