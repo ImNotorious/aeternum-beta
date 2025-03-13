@@ -2,5 +2,5 @@ fastapi
 uvicorn 
 pillow 
 numpy 
-tensorflow==2.12.0 
+tensorflow
 h5py
