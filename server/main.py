@@ -18,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL_PATH = "client/public/model.h5"
+MODEL_PATH = "server/model.h5"
 
 
 # Custom Conv2D layer that supports groups, activation, use_bias, and other parameters.
