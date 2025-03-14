@@ -146,8 +146,10 @@ export default function Home() {
       </section>
 
     
-      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-      <script src="https://files.bpcontent.cloud/2025/03/06/07/20250306071115-KQ5Q48LH.js"></script>
+      
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/03/06/07/20250306071115-KQ5Q48LH.js"></script>
+    
     
     </div>
   )
