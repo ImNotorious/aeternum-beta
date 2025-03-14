@@ -109,28 +109,29 @@ export default function About() {
           <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Dr. Sarah Johnson",
-                role: "Co-Founder & Chief Medical Officer",
+                name: "Akshat Jain",
                 image: "/placeholder.svg?height=300&width=300",
                 delay: 0.1,
               },
               {
-                name: "Michael Chen",
-                role: "Co-Founder & CEO",
+                name: "Amulya Tripathi",
                 image: "/placeholder.svg?height=300&width=300",
                 delay: 0.2,
               },
               {
-                name: "Emily Rodriguez",
-                role: "Head of Product",
+                name: "Aryan Sethi",
                 image: "/placeholder.svg?height=300&width=300",
                 delay: 0.3,
               },
               {
-                name: "David Kim",
-                role: "Chief Technology Officer",
+                name: "Nishit Kumar",
                 image: "/placeholder.svg?height=300&width=300",
                 delay: 0.4,
+              },
+              {
+                name: "Suman Sharma",
+                image: "/placeholder.svg?height=300&width=300",
+                delay: 0.5,
               },
             ].map((member, index) => (
               <motion.div
