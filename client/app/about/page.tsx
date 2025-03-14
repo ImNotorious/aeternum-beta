@@ -27,49 +27,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Story Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            <motion.div
-              className="space-y-4"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-blue-900">Our Story</h2>
-                <p className="text-gray-600">
-                  Aeternum was founded in 2020 with a simple mission: to make health tracking and wellness accessible to
-                  everyone. Our founders, a team of health professionals and technology experts, recognized that while
-                  there were many health tracking tools available, most were complicated, disconnected, or failed to
-                  provide actionable insights.
-                </p>
-                <p className="text-gray-600">
-                  We set out to create a platform that not only tracks health metrics but also provides personalized
-                  recommendations and connects users with health professionals when needed. Today, Aeternum serves
-                  thousands of users worldwide, helping them achieve their health and wellness goals.
-                </p>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Image
-                src="/placeholder.svg?height=500&width=500"
-                width={500}
-                height={500}
-                alt="Aeternum founders"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Our Mission Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
