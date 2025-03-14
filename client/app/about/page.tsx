@@ -87,135 +87,92 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
-      <div className="container px-4 md:px-6">
-        <motion.div
-          className="flex flex-col items-center justify-center space-y-4 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-900">
-              Meet Our Team
-            </h2>
-            <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            </p>
-          </div>
-        </motion.div>
-        <div className="mx-auto grid max-w-4xl gap-6 py-12 grid-cols-2 md:grid-cols-4">
-          {[
-            {
-              name: "Akshat Jain",
-              image: "/placeholder.svg?height=300&width=300",
-              delay: 0.1,
-            },
-            {
-              name: "Amulya Tripathi",
-              image: "/placeholder.svg?height=300&width=300",
-              delay: 0.2,
-            },
-            {
-              name: "Aryan Sethi",
-              image: "/placeholder.svg?height=300&width=300",
-              delay: 0.3,
-            },
-            {
-              name: "Nishit Kumar",
-              image: "/placeholder.svg?height=300&width=300",
-              delay: 0.4,
-            },
-          ].map((member, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col items-center space-y-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: member.delay }}
-              viewport={{ once: true }}
-            >
-              <Image
-                src={member.image || "/placeholder.svg"}
-                width={300}
-                height={300}
-                alt={member.name}
-                className="aspect-square overflow-hidden rounded-full object-cover"
-              />
-              <div className="grid gap-1 text-center">
-                <h3 className="text-lg font-bold text-blue-900">{member.name}</h3>
-                <p className="text-sm text-gray-600">{member.role}</p>
-              </div>
-            </motion.div>
-          ))}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+    <div className="container px-4 md:px-6">
+      <motion.div
+        className="flex flex-col items-center justify-center space-y-4 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <div className="space-y-2">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-900">
+            Meet Our Team
+          </h2>
+          <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          </p>
         </div>
-        <div className="mx-auto max-w-4xl">
+      </motion.div>
+      <div className="mx-auto grid max-w-4xl gap-6 py-12 grid-cols-2 md:grid-cols-4">
+        {[
+          {
+            name: "Akshat Jain",
+            image: "/placeholder.svg?height=300&width=300",
+            delay: 0.1,
+          },
+          {
+            name: "Amulya Tripathi",
+            image: "/placeholder.svg?height=300&width=300",
+            delay: 0.2,
+          },
+          {
+            name: "Aryan Sethi",
+            image: "/placeholder.svg?height=300&width=300",
+            delay: 0.3,
+          },
+          {
+            name: "Nishit Kumar",
+            image: "/placeholder.svg?height=300&width=300",
+            delay: 0.4,
+          },
+        ].map((member, index) => (
           <motion.div
+            key={index}
             className="flex flex-col items-center space-y-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: member.delay }}
             viewport={{ once: true }}
           >
             <Image
-              src="/placeholder.svg?height=300&width=300"
+              src={member.image || "/placeholder.svg"}
               width={300}
               height={300}
-              alt="Suman Sharma"
+              alt={member.name}
               className="aspect-square overflow-hidden rounded-full object-cover"
             />
             <div className="grid gap-1 text-center">
-              <h3 className="text-lg font-bold text-blue-900">Suman Sharma</h3>
-              <p className="text-sm text-gray-600"></p>
+              <h3 className="text-lg font-bold text-blue-900">{member.name}</h3>
+              <p className="text-sm text-gray-600">{member.role}</p>
             </div>
           </motion.div>
-        </div>
+        ))}
       </div>
-    </section>
-
-
-      {/* Partners Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-        <div className="container px-4 md:px-6">
-          <motion.div
-            className="flex flex-col items-center justify-center space-y-4 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-900">
-                Our Partners
-              </h2>
-              <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                We collaborate with leading health organizations and technology companies to provide the best experience
-                for our users.
-              </p>
-            </div>
-          </motion.div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 md:grid-cols-3 lg:grid-cols-5">
-            {[1, 2, 3, 4, 5].map((_, index) => (
-              <motion.div
-                key={index}
-                className="flex items-center justify-center p-4"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src="/placeholder.svg?height=80&width=160"
-                  width={160}
-                  height={80}
-                  alt={`Partner ${index + 1}`}
-                  className="aspect-[2/1] object-contain"
-                />
-              </motion.div>
-            ))}
+      <div className="mx-auto max-w-4xl">
+        <motion.div
+          className="flex flex-col items-center space-y-2"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            src="/placeholder.svg?height=300&width=300"
+            width={300}
+            height={300}
+            alt="Suman Sharma"
+            className="aspect-square overflow-hidden rounded-full object-cover"
+          />
+          <div className="grid gap-1 text-center">
+            <h3 className="text-lg font-bold text-blue-900">Suman Sharma</h3>
+            <p className="text-sm text-gray-600"></p>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </div>
+    </div>
+  </section>
+
 
       {/* CTA Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-800 text-white">
