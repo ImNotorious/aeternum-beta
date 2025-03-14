@@ -87,77 +87,92 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
-        <div className="container px-4 md:px-6">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+      <div className="container px-4 md:px-6">
+        <motion.div
+          className="flex flex-col items-center justify-center space-y-4 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-900">
+              Meet Our Team
+            </h2>
+            <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            </p>
+          </div>
+        </motion.div>
+        <div className="mx-auto grid max-w-4xl gap-6 py-12 grid-cols-2 md:grid-cols-4">
+          {[
+            {
+              name: "Akshat Jain",
+              image: "/placeholder.svg?height=300&width=300",
+              delay: 0.1,
+            },
+            {
+              name: "Amulya Tripathi",
+              image: "/placeholder.svg?height=300&width=300",
+              delay: 0.2,
+            },
+            {
+              name: "Aryan Sethi",
+              image: "/placeholder.svg?height=300&width=300",
+              delay: 0.3,
+            },
+            {
+              name: "Nishit Kumar",
+              image: "/placeholder.svg?height=300&width=300",
+              delay: 0.4,
+            },
+          ].map((member, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center space-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: member.delay }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src={member.image || "/placeholder.svg"}
+                width={300}
+                height={300}
+                alt={member.name}
+                className="aspect-square overflow-hidden rounded-full object-cover"
+              />
+              <div className="grid gap-1 text-center">
+                <h3 className="text-lg font-bold text-blue-900">{member.name}</h3>
+                <p className="text-sm text-gray-600">{member.role}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        <div className="mx-auto max-w-4xl">
           <motion.div
-            className="flex flex-col items-center justify-center space-y-4 text-center"
+            className="flex flex-col items-center space-y-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-900">
-                Meet Our Team
-              </h2>
-              <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Our dedicated team of health professionals, technology experts, and wellness advocates work together to
-                make Aeternum the best health platform available.
-              </p>
+            <Image
+              src="/placeholder.svg?height=300&width=300"
+              width={300}
+              height={300}
+              alt="Suman Sharma"
+              className="aspect-square overflow-hidden rounded-full object-cover"
+            />
+            <div className="grid gap-1 text-center">
+              <h3 className="text-lg font-bold text-blue-900">Suman Sharma</h3>
+              <p className="text-sm text-gray-600"></p>
             </div>
           </motion.div>
-          <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                name: "Akshat Jain",
-                image: "/placeholder.svg?height=300&width=300",
-                delay: 0.1,
-              },
-              {
-                name: "Amulya Tripathi",
-                image: "/placeholder.svg?height=300&width=300",
-                delay: 0.2,
-              },
-              {
-                name: "Aryan Sethi",
-                image: "/placeholder.svg?height=300&width=300",
-                delay: 0.3,
-              },
-              {
-                name: "Nishit Kumar",
-                image: "/placeholder.svg?height=300&width=300",
-                delay: 0.4,
-              },
-              {
-                name: "Suman Sharma",
-                image: "/placeholder.svg?height=300&width=300",
-                delay: 0.5,
-              },
-            ].map((member, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center space-y-2"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: member.delay }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src={member.image || "/placeholder.svg"}
-                  width={300}
-                  height={300}
-                  alt={member.name}
-                  className="aspect-square overflow-hidden rounded-full object-cover"
-                />
-                <div className="grid gap-1 text-center">
-                  <h3 className="text-lg font-bold text-blue-900">{member.name}</h3>
-                  <p className="text-sm text-gray-600">{member.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
+
 
       {/* Partners Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
